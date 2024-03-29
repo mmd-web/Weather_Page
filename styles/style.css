@@ -1,0 +1,64 @@
+#box_content {
+    width: 450px;
+    height: 500px;
+    background-color: #2e2e2e82;
+    backdrop-filter: blur(15px);
+    border: 2px solid #31313180;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #1e1e1e80;
+}
+
+#box_search {
+    width: 100%;
+    height: 20%;
+    background-color: transparent;
+    gap: 20px;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 4px 6px -3px #ffffff , 0 4px 6px -5px #ffffff ,0 4px 6px -9px #ffffff;
+}
+#input_search {
+    width: 220px;
+    height: 40px;
+    padding: 0 25px;
+    font-family: var(--Fontfamily);
+    font-size: 20px;
+    color: #1c2034;
+    border-radius: 8px;
+    border: none;
+    background-color: #fff;
+    outline: none;
+    cursor: auto;
+    box-shadow: 0 0 8px #ffffffa3,0 0 10px #ffffff7e,0 0 15px #ffffff5e;
+}
+#icon_sch {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    font-family: var(--Fontfamily);
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #1c2034;
+    box-shadow: 0 0 8px #ffffffa3,0 0 10px #ffffff7e,0 0 15px #ffffff5e;
+}
+
+#box_data_weather {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    align-items: start;
+    gap: 25px;
+}
+
+#box_data_weather>span {
+    font-family: var(--Fontfamily);
+    color: #1c2034;
+    font-weight: 600;
+    font-size: 28px;
+    padding: 0 30px;
+    text-shadow: 0 0 4px #0079d0,0 0 4px #fff ,0 0 4px #0079d0,0 0 4px #fff;
+}
+#box_data_weather>#citys_name , #box_data_weather>#temp {
+    font-size: 38px;
+}

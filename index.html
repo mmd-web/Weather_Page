@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather page</title>
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    
+    <div id="container" class="flex_center">
+        <div id="box_content" class="rel_position">
+
+            <div id="box_search" class="rel_position flex_row">
+                <input type="text" name="" id="input_search">
+                <button id="icon_sch">sch</button>
+            </div>
+
+            <div id="box_data_weather" class="rel_position flex_col">
+                <span id="citys_name">Weather in citys</span>
+                <span id="temp">32C</span>
+                <span id="des">Sunny</span>
+                <span id="humidity">Humidity : 22%</span>
+                <span id="windspeed">Windspeed : 32 km/h</span>
+            </div>
+            
+        </div>
+    </div>
 </body>
 </html>
 <script src="./js/apps.js"></script>
