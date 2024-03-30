@@ -8,6 +8,7 @@ let tempText = $.getElementById ("temp");
 let desText = $.getElementById ("des")
 let humidityText = $.getElementById ("humidity");
 let windspeedText = $.getElementById ("windspeed");
+let mudalBoxUndefined = $.getElementById ("mudal_box");
 
 let dataWeather = [
     {Id : 1 , Name : "tabriz" , temp : 15 , des : "Sunny" , humidity : 2 , windspeed : 3},
@@ -25,13 +26,20 @@ btnSearch.addEventListener ("click" , () => {
         return weather.Name === valueInputSearch;
     })
     // console.log(checkOfData);
-    citysName.innerHTML = 'Weather in '+checkOfData.Name;
-    tempText.innerHTML = checkOfData.temp+'C';
-    desText.innerHTML = checkOfData.des;
-    humidityText.innerHTML = 'Humidity : ' + checkOfData.humidity + '%';
-    windspeedText.innerHTML = 'Windspeed : ' + checkOfData.windspeed + 'km/h';
-
-    boxWeather.style.display = "flex";
-    boxWeather.style.height = "350px";
-    boxWeather.classList.add ("animationWR");
+    if (checkOfData) {
+        mudalBoxUndefined.style.display = "none";
+        citysName.innerHTML = 'Weather in '+checkOfData.Name;
+        tempText.innerHTML = checkOfData.temp+'C';
+        desText.innerHTML = checkOfData.des;
+        humidityText.innerHTML = 'Humidity : ' + checkOfData.humidity + '%';
+        windspeedText.innerHTML = 'Windspeed : ' + checkOfData.windspeed + 'km/h';
+    
+        boxWeather.style.display = "flex";
+        boxWeather.style.height = "350px";
+        boxWeather.classList.add ("animationWR");
+    }else {
+        boxWeather.style.display = "none";
+        mudalBoxUndefined.style.display = "flex";
+        mudalBoxUndefined.classList.add ("animationMUDAL");
+    }
 })
