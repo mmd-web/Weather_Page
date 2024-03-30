@@ -1,6 +1,6 @@
 #box_content {
     width: 450px;
-    height: 500px;
+    height: max-content;
     background-color: #2e2e2e82;
     backdrop-filter: blur(15px);
     border: 2px solid #31313180;
@@ -10,7 +10,7 @@
 
 #box_search {
     width: 100%;
-    height: 20%;
+    height: 80px;
     background-color: transparent;
     gap: 20px;
     border-bottom: 1px solid #fff;
@@ -45,10 +45,31 @@
 
 #box_data_weather {
     width: 100%;
-    height: 80%;
+    height: 0;
     background-color: transparent;
     align-items: start;
     gap: 25px;
+    display: none;
+    opacity: 1;
+    overflow-y: hidden;
+}
+
+.animationWR {
+    animation: timehover 1s 1;
+}
+@keyframes timehover {
+    100% {
+        height: 350px;
+        opacity: 1;
+    }
+    50% {
+        height: 0;
+        opacity: 0; 
+    }
+    0% {
+        height: 0;
+        opacity: 0;
+    }
 }
 
 #box_data_weather>span {
