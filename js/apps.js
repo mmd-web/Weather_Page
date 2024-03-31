@@ -27,7 +27,10 @@ btnSearch.addEventListener ("click" , () => {
     })
     // console.log(checkOfData);
     if (checkOfData) {
+        mudalBoxUndefined.classList.remove ("animationMUDAL");
+        mudalBoxUndefined.classList.add ("animationMUDALend");
         mudalBoxUndefined.style.display = "none";
+        boxWeather.classList.remove ("animationWREnd");
         citysName.innerHTML = 'Weather in '+checkOfData.Name;
         tempText.innerHTML = checkOfData.temp+'C';
         desText.innerHTML = checkOfData.des;
@@ -37,8 +40,14 @@ btnSearch.addEventListener ("click" , () => {
         boxWeather.style.display = "flex";
         boxWeather.style.height = "350px";
         boxWeather.classList.add ("animationWR");
-    }else {
-        boxWeather.style.display = "none";
+    }else if (!checkOfData) {
+        boxWeather.style.display = "flex";
+        boxWeather.style.height = 0;
+        boxWeather.classList.remove ("animationWR");
+        boxWeather.classList.add ("animationWREnd");
+
+        // boxWeather.style.display = "none";
+        mudalBoxUndefined.classList.remove ("animationMUDALend");
         mudalBoxUndefined.style.display = "flex";
         mudalBoxUndefined.classList.add ("animationMUDAL");
     }
